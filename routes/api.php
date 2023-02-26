@@ -14,10 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
 
 Route::post('/register', [App\Http\Controllers\Auth\UserAuthController::class, 'register']);
 Route::post('/login', [App\Http\Controllers\Auth\UserAuthController::class, 'login']);
 Route::post('/logout', [App\Http\Controllers\Auth\UserAuthController::class, 'logout']);
+
+
+Route::get('/job_board', [App\Http\Controllers\Admin\JobBoardController::class, 'index']);
+Route::post('/job_board', [App\Http\Controllers\Admin\JobBoardController::class, 'store']);
+Route::put('/job_board/{id}', [App\Http\Controllers\Admin\JobBoardController::class, 'update']);
+Route::delete('/job_board/{id}', [App\Http\Controllers\Admin\JobBoardController::class, 'destroy']);
