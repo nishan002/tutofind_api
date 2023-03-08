@@ -25,5 +25,25 @@ Route::post('/logout', [App\Http\Controllers\Auth\UserAuthController::class, 'lo
 
 Route::get('/job_board', [App\Http\Controllers\Admin\JobBoardController::class, 'index']);
 Route::post('/job_board', [App\Http\Controllers\Admin\JobBoardController::class, 'store']);
+Route::get('/job_board/{id}', [App\Http\Controllers\Admin\JobBoardController::class, 'edit']);
 Route::put('/job_board/{id}', [App\Http\Controllers\Admin\JobBoardController::class, 'update']);
 Route::delete('/job_board/{id}', [App\Http\Controllers\Admin\JobBoardController::class, 'destroy']);
+
+
+Route::get('/categories', [App\Http\Controllers\Admin\CategoryController::class, 'index']);
+Route::post('/categories', [App\Http\Controllers\Admin\CategoryController::class, 'store']);
+Route::get('/categories/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'edit']);
+Route::put('/categories/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'update']);
+Route::delete('/categories/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy']);
+
+Route::get('/subjects', [App\Http\Controllers\Admin\SubjectController::class, 'index']);
+Route::post('/subjects', [App\Http\Controllers\Admin\SubjectController::class, 'store']);
+Route::get('/subjects/{id}', [App\Http\Controllers\Admin\SubjectController::class, 'edit']);
+Route::put('/subjects/{id}', [App\Http\Controllers\Admin\SubjectController::class, 'update']);
+Route::delete('/subjects/{id}', [App\Http\Controllers\Admin\SubjectController::class, 'destroy']);
+
+Route::get('/student_classes', [App\Http\Controllers\Admin\StudentClassController::class, 'index']);
+Route::post('/student_classes', [App\Http\Controllers\Admin\StudentClassController::class, 'store']);
+Route::get('/student_classes/{id}', [App\Http\Controllers\Admin\StudentClassController::class, 'edit']);
+Route::put('/student_classes/{id}', [App\Http\Controllers\Admin\StudentClassController::class, 'update']);
+Route::delete('/student_classes/{id}', [App\Http\Controllers\Admin\StudentClassController::class, 'destroy']);
