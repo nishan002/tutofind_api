@@ -47,3 +47,9 @@ Route::post('/student_classes', [App\Http\Controllers\Admin\StudentClassControll
 Route::get('/student_classes/{id}', [App\Http\Controllers\Admin\StudentClassController::class, 'edit']);
 Route::put('/student_classes/{id}', [App\Http\Controllers\Admin\StudentClassController::class, 'update']);
 Route::delete('/student_classes/{id}', [App\Http\Controllers\Admin\StudentClassController::class, 'destroy']);
+
+Route::get('/tuition_related_info', [App\Http\Controllers\Admin\TuitionRelatedInfoController::class, 'index']);
+Route::post('/tuition_related_info', [App\Http\Controllers\Admin\TuitionRelatedInfoController::class, 'store']);
+Route::get('/tuition_related_info/{id}', [App\Http\Controllers\Admin\TuitionRelatedInfoController::class, 'edit']);
+Route::put('/tuition_related_info/{id}', [App\Http\Controllers\Admin\TuitionRelatedInfoController::class, 'update']);
+Route::delete('/tuition_related_info/{id}', [App\Http\Controllers\Admin\TuitionRelatedInfoController::class, 'destroy']);
